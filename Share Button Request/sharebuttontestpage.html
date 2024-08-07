@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Share Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-player">
+        <video id="video" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="share-button" class="share-button">Share</button>
+    </div>
+
+    <div id="embed-modal" class="embed-modal">
+        <div class="embed-modal-content">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <h2>Embed Configurator</h2>
+            <label for="autoplay">Autoplay:</label>
+            <input type="checkbox" id="autoplay">
+            <br>
+            <label for="controls">Controls:</label>
+            <input type="checkbox" id="controls" checked>
+            <br>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="560x315">560x315</option>
+                <option value="640x360">640x360</option>
+                <option value="853x480">853x480</option>
+                <option value="1280x720">1280x720</option>
+            </select>
+            <br>
+            <button id="generate-embed" class="generate-embed">Generate Embed Code</button>
+            <textarea id="embed-code" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
